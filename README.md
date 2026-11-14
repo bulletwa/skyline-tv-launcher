@@ -9,8 +9,9 @@ clean mode, India AQI in the header, and a takeover of the Home button from Goog
 
 | | |
 |---|---|
-| ![Day, cards and dock](docs/screenshots/home-day.jpg) | ![Golden hour](docs/screenshots/home-cards.jpg) |
-| ![Fog](docs/screenshots/weather-fog.jpg) | ![Storm](docs/screenshots/weather-storm.jpg) |
+| ![Day](docs/screenshots/day.jpg) | ![Night](docs/screenshots/night.jpg) |
+| ![Rain](docs/screenshots/rain.jpg) | ![Snow settling on the cards and dock](docs/screenshots/snow.jpg) |
+| ![Fog](docs/screenshots/fog.jpg) | ![Storm](docs/screenshots/storm.jpg) |
 
 ## Install (no build needed)
 1. Download `Skyline-0.1.apk` from the [latest release](https://github.com/bulletwa/skyline-tv-launcher/releases/latest).
