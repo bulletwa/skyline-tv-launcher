@@ -7,7 +7,25 @@ minSdk 26 / targetSdk 33, Outfit font, no third-party libraries.
 storms, stars), frosted-glass dialogs, home cards (Wikipedia spotlight, news, now playing, weather, PlayStation),
 clean mode, India AQI in the header, and a takeover of the Home button from Google TV.
 
-## Quick start
+| | |
+|---|---|
+| ![Day, cards and dock](docs/screenshots/home-day.jpg) | ![Golden hour](docs/screenshots/home-cards.jpg) |
+| ![Fog](docs/screenshots/weather-fog.jpg) | ![Storm](docs/screenshots/weather-storm.jpg) |
+
+## Install (no build needed)
+1. Download `Skyline-0.1.apk` from the [latest release](https://github.com/bulletwa/skyline-tv-launcher/releases/latest).
+2. On the TV enable Developer options and USB/network debugging, then:
+   ```bash
+   adb connect <tv-ip>:5555
+   adb install Skyline-0.1.apk
+   ```
+   (Or sideload with any file manager / "Send Files to TV" app.)
+3. Open **Skyline** once. To make it take over the Home button, enable its accessibility service
+   (Settings → Accessibility → Skyline) and allow overlay permission. See [docs/FEATURES.md](docs/FEATURES.md).
+
+The APK is a debug-signed build for Android TV, API 26+ (tested on Android 11).
+
+## Build from source
 ```bash
 cp local.properties.example local.properties   # set sdk.dir; waqi.token is optional
 ./gradlew testDebugUnitTest                    # unit tests
