@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Secrets stay out of source: put `waqi.token=...` in local.properties (git-ignored).
+def localProps = new Properties()
+def localFile = rootProject.file('local.properties')
+if (localFile.exists()) localFile.withInputStream { localProps.load(it) }
+
+android {
+    namespace 'com.tvlauncher'
+    compileSdk 33
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    defaultConfig {
+        buildConfigField 'String', 'WAQI_TOKEN', "\"${localProps.getProperty('waqi.token', '').trim()}\""
+        applicationId 'com.tvlauncher'
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName '0.1'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError false
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20231013'
+}

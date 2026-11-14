@@ -1,0 +1,6 @@
+# Copy the lines you need into local.properties (which is git-ignored).
+sdk.dir=/opt/homebrew/share/android-commandlinetools
+
+# Free token from https://aqicn.org/data-platform/token : turns the AQI in the header from Open-Meteo's
+# modelled estimate (marked "AQI ~88") into a real monitoring-station reading ("AQI 212").
+waqi.token=
